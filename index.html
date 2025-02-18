@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ishan Jain - Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.png" type="image/png">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+</head>
+<body>
+    <header>
+    <nav id="navbar">
+        <div class="left">Ishan Jain</div>
+        <div class="right">
+            <ul>
+                <li><a href="#Home">Home</a></li>
+                <li><a href="#about">About Me</a></li>
+                <!-- <li><a href="#projects">Projects</a></li> -->
+                <!-- <li><a href="#experience">Experience</a></li> -->
+                <!-- <li><a href="#skills">Skills</a></li> -->
+                <li><a href="#resume">Resume</a></li>
+                <!-- <li><a href="#contact">Contact Me</a></li> -->
+            </ul>
+        </div>
+        <div class="corner">
+            <ul>
+                <li>
+                    <a href="https://github.com/ishanjain2003" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/ishan-j-a15a4020b/" target="_blank">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+    <main>
+        <section class="firstSection" id="Home">
+            <div class="leftSection">
+                Hi, My name is <br><span class="purple semibold">Ishan Jain</span>
+                <div class="text-baseline">and I am a passionate</div>
+                <span id="element"></span>
+            </div>
+            <div class="rightSection">
+                <img class="profile-pic" src="user.png" alt="">
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about" id="about">
+            <div class="container-a">
+                <div class="row">
+                    <!-- <div class="about-col-1">
+                        <img src="user.png" alt="" id="user-image" class="user-image">
+                    </div> -->
+                    <div class="about-col-2">
+                        <h1 class="sub-title">About me</h1>
+                        <p>I'm an Undergraduate Student at Manipal University, Jaipur, pursuing a Bachelor of Technology in Computer Science with Honors in Artificial Intelligence and Machine Learning. Although AI and ML are my main areas of interest, I'm also fascinated by Graphic Designing and Content Creation.</p>
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="subskills">
+                            <ul>
+                                <li><span>Programming</span><br>Can code in various languages like Python, C, HTML, Java, SQL</li>
+                                <li><span>UI/UX Designing</span><br>Designed the prototype of my project apps: Crave MUJ, UniWay</li>
+                                <li><span>Other Skills</span><br>I possess strong communication skills, teamwork, and leadership.</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>B.Tech (HONS.) Computer Science (Artificial Intelligence & Machine Learning)</span><br>Manipal University Jaipur (2022-2026)</li>
+                                <li><span>Senior Secondary School</span><br>K.L. International School (2020-2022)</li>
+                                <li><span>Higher Secondary School</span><br>St. Mary's Academy (2010-2020)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects">
+            <h2 class="section-title">Projects</h2>
+            <div class="projects-container">
+                <div class="project-cards">
+                    <!-- Project 1: UniWay -->
+                    <div class="project-card">
+                        <h3>UniWay</h3>
+                        <p>Co-founded a startup delivering an automated cab management system through a mobile app for day scholars. Increased user engagement by 40% through market-driven features.</p>
+                        <a href="https://www.figma.com/design/4LZbOAXq2wZmcX5LIPV2VF/UniWay-Replica?node-id=0-1&t=yNySmJP3wLPwPgPJ-1" target="_blank" class="project-link">View Project</a>
+                    </div>
+
+                    <!-- Project 2: Crop Disease Detection -->
+                    <div class="project-card">
+                        <h3>Crop Disease Detection</h3>
+                        <p>Achieved 92% accuracy in detecting and classifying crop diseases using a deep learning model. Reduced disease detection time by 40%, enabling faster diagnosis and response.</p>
+                        <a href="#" target="_blank" class="project-link">Work In Progress</a>
+                    </div>
+
+                    <!-- Project 3: Book My Desk -->
+                    <div class="project-card">
+                        <h3>Book My Desk</h3>
+                        <p>Designed and developed the front end of the "Book My Desk" platform using React.js, HTML, and CSS. Automated desk and meeting room bookings, reducing manual allocation conflicts by 40%.</p>
+                        <a href="https://www.figma.com/design/2jSAkqJNISP9HcMR17Jl0B/Sample-Mazars?node-id=371-112&t=ckfmRLS7BzeFgdEa-1" target="_blank" class="project-link">View Project</a>
+                    </div>
+
+                    <!-- Project 4: Spice Club Website -->
+                    <div class="project-card">
+                        <h3>Spice Club</h3>
+                        <p>Led a team of 5 developers in designing and maintaining Spice Club’s official website. Optimized website responsiveness and performance, leading to a 20% reduction in bounce rates.</p>
+                        <a href="#" target="_blank" class="project-link">View Project</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience">
+            <h2 class="section-title">Experience</h2>
+            <div class="experience-container">
+                <!-- Experience 1: Forviz Mazars -->
+                <div class="experience-card">
+                    <h3>Forviz Mazars</h3>
+                    <h4 class="exp-para-head">
+                        <strong>Design and Software Development Intern</strong>
+                    </h4>
+                    <p>July 2024 – August 2024 <br><br> Gurugram</p>
+                    <!-- <ul>
+                        <li>Designed and developed the entire front end of the “Book My Desk” platform using React.js, HTML, and CSS, enhancing UI/UX and responsiveness.</li>
+                        <li>Automated desk and meeting room bookings, reducing manual allocation conflicts by 40% and improving workspace efficiency.</li>
+                        <li>Delivered a 15% improvement in user engagement through intuitive UI enhancements and performance optimizations.</li>
+                    </ul> -->
+                </div>
+
+                <!-- Experience 2: Spice Club -->
+                <div class="experience-card">
+                    <h3>Spice Club</h3>
+                    <h4 class="exp-para-head">
+                        <strong>Machine Learning and Front End Developer Intern</strong>
+                    </h4>
+                        <p>August 2024 – November 2024 <br><br> Bangalore (Remote)</p>
+                    <!-- <ul>
+                        <li>Led a team of 5 developers in designing and maintaining Spice Club’s official website, ensuring seamless user experience and high performance.</li>
+                        <li>Optimized website responsiveness and performance, leading to a 20% reduction in bounce rates and a 25% increase in returning users.</li>
+                        <li>Established a coding framework using Git, enabling 15+ team members to collaborate seamlessly on projects; improved code integration processes and reduced merge conflicts by 40%.</li>
+                    </ul> -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <!-- <section id="skills">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3>Languages</h3>
+                    <ul>
+                        <li>Python</li>
+                        <li>C</li>
+                        <li>HTML/CSS</li>
+                        <li>SQL</li>
+                        <li>JavaScript</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Libraries and Tools</h3>
+                    <ul>
+                        <li>React</li>
+                        <li>Numpy</li>
+                        <li>Pandas</li>
+                        <li>TensorFlow</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Technologies/Frameworks</h3>
+                    <ul>
+                        <li>Git</li>
+                        <li>GitHub</li>
+                        <li>Linux</li>
+                    </ul>
+                </div>
+            </div>
+        </section> -->
+
+        <!-- Resume Section -->
+        <!-- <section id="resume">
+            <h2 class="section-title">Resume</h2>
+            <div class="resume-container">
+                <a href="AA [Resume] Ishan Jain.pdf" target="_blank" class="resume-link">Download My Resume</a>
+            </div>
+        </section> -->
+
+        <!-- Contact Section -->
+        <!-- <section id="contact">
+            <h2 class="section-title">Contact Me</h2>
+            <div class="container-contact">
+                <div class="contact-info">
+                    <p>Email: jishan29oct@gmail.com</p>
+                    <p>Phone: +91 7455939940</p>
+                    <p>LinkedIn: <a href="https://www.linkedin.com/in/ishan-j-a15a4020b/" target="_blank">Ishan Jain</a></p>
+                    <p>GitHub: <a href="https://github.com/ishan29jain" target="_blank">My Contributions</a></p>
+                </div>
+                <div class="form">
+                    <form action="#" method="POST" class="contact-form">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" required>
+                        <label for="email">Your Email</label>
+                        <input type="email" id="email" name="email" required>
+                        <label for="message">Your Message</label>
+                        <textarea id="message" name="message" required></textarea>
+                        <button type="submit">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section> -->
+    </main>
+
+    <footer>
+        <div class="footer">
+            <div class="footer-first">Ishan Jain</div>
+            <div class="footer-third">
+                <ul>
+                    <li><a href="#Home">Home</a></li>
+                    <li><a href="#about">About Me</a></li>
+                    <!-- <li><a href="#projects">Projects</a></li> -->
+                    <!-- <li><a href="#experience">Experience</a></li> -->
+                    <!-- <li><a href="#skills">Skills</a></li> -->
+                    <li><a href="#resume">Resume</a></li>
+                    <li><a href="#contact">Contact Me</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-rights">
+            www.iamishan.me | All rights reserved
+        </div>
+    </footer>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
