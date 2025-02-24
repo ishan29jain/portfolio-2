@@ -43,21 +43,59 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 80px; 
+    height: 8vh; 
     padding: 0 5%;
     border-radius: 80px;
     margin: 2% auto; 
     max-width: 80%;
     background-color: rgb(0, 0, 0);
     box-shadow: 0 2px rgb(220 220 220 / 10%);
-    transition: all 0.3s ease;
+    transition: all 0.35s ease-in-out;
 }
+
+
+nav.scrolled {
+    max-width: 25%;
+}
+
+nav.scrolled .right {
+    display: none; 
+}
+
+nav.scrolled .left {
+    font-size: 1.2rem; 
+}
+
+/*-----Contact Links in Scrolled State-----*/
+ nav.scrolled .contact-links {
+    display: flex;
+    gap: 20px;
+}
+
+nav.scrolled .contact-links a {
+    color: rgb(127, 127, 127);
+    font-size: 1.2rem;
+    transition: color 0.35s ease;
+}
+/*
+nav.scrolled .contact-links a:hover {
+    color: rgb(255, 255, 255);
+} */
+
+/* 
+nav.scrolled:hover{
+    max-width: 80%;
+} */
 
 .left {
     font-size: 1.5rem;
     font-weight: bold;
     color: white;
     transition: font-size 0.3s ease;
+}
+
+.right{
+    overflow: hidden;
 }
 
 .right ul {
@@ -92,15 +130,18 @@ nav {
 .corner ul li a:hover {
     color: rgb(255, 255, 255);
 }
-
+/* 
 nav.scrolled:hover {
     height: 80px;
     padding: 0 5%;
-}
+} */
 
-nav.scrolled:hover .left {
+/* nav.scrolled:hover .left {
     font-size: 1.5rem;
-}
+} */
+
+
+
 
 .firstSection {
     display: flex;
@@ -110,12 +151,12 @@ nav.scrolled:hover .left {
     /* min-height: 100vh; */
     /* background: linear-gradient(135deg, #000428, #004e92); */
     align-items: center;
-    /* margin: 15% 10% 10% 10%; */
+    margin: 1% 10% 10% 10%;
     /* margin-right: auto; */
 }
 
 .text-baseline{
-    font-size: 1.2rem;
+    font-size: 1.5rem;
 }
 
 .rightSection{
@@ -127,8 +168,8 @@ nav.scrolled:hover .left {
     width: 30%;
 }
 
-#profileimage{
-    width: 100px;
+.profile-pic img{
+    box-shadow:0 0 2px rgb(0, 0, 0);
 }
 
 /*-----Name and Passion-----*/
@@ -145,7 +186,7 @@ nav.scrolled:hover .left {
 
 #element {
     color: rgb(156, 156, 251);
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     font-weight: bold;
 }
 
@@ -201,7 +242,7 @@ nav.scrolled:hover .left {
     content: '';
     width: 0;
     height: 3px;
-    background: #ff004f;
+    background: #00bbff;
     position: absolute;
     left: 0;
     bottom: -8px;
@@ -218,7 +259,7 @@ nav.scrolled:hover .left {
 
 .tab-contents.active-tab {
     display: block;
-    margin-top: 20px;
+    /* margin-top: 20px; */
 }
 
 .user-image {
@@ -236,15 +277,28 @@ nav.scrolled:hover .left {
     text-align: center;
     font-size: 60px;
     color: #ffffff;
-    margin-bottom: 40px;
+    margin-bottom: 5%;
 }
 
 .projects-container {
-    display: flex;
-    overflow-x: clip;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    overflow-x: auto;
+    /* overflow: hidden; */
     gap: 20px;
-    padding: 0 20px;
-    justify-content: center;
+    /* max-width: 1400px; */
+    padding: 0 1%;
+    scroll-behavior: smooth;
+    /* justify-content: center; */
+
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.projects-container::-webkit-scrollbar-thumb {
+    display: none;
+    /* background: rgba(0, 0, 0, 0);
+    border-radius: 5px; */
 }
 
 .project-cards {
@@ -253,18 +307,20 @@ nav.scrolled:hover .left {
 }
 
 .project-card {
-    /* background-color: #1a1a40; */
+    background-color: #212121;
     color: white;
     border-radius: 10px;
     padding: 20px;
-    width: 300px;
+    width: 24vw;
+    justify-content:start;
+    /* left: 0; */
     /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
     transition: transform 0.3s ease-in-out;
 }
 
-.project-card:hover {
+/* .project-card:hover {
     transform: scale(1.05);
-}
+} */
 
 .project-card h3 {
     font-size: 24px;
@@ -292,6 +348,12 @@ nav.scrolled:hover .left {
     background-color: #0056b3;
 }
 
+.project-buttons{
+    display: flex;
+    gap: 4%;
+}
+
+/* 
 .separator{
     width: 0.007rem;
     height: 80%;
@@ -301,7 +363,7 @@ nav.scrolled:hover .left {
 .separator-height{
     width: 100%;
     height: 0.007rem;
-}
+} */
 /*-----Responsive Design for Mobile View-----*/
 @media (max-width: 768px) {
     .projects-container {
@@ -317,7 +379,7 @@ nav.scrolled:hover .left {
 
 @media (max-width: 1420px){
     .project-card {
-        width: 80%; 
+        width: 40vw; 
     }
 }
 
@@ -350,7 +412,7 @@ nav.scrolled:hover .left {
 
 .experience-card:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 2px 4px rgba(152, 152, 152, 0.1);
+    box-shadow: 0 0 5px 4px #00d9ff36;
 }
 
 .experience-card h3 {
@@ -493,6 +555,34 @@ nav.scrolled:hover .left {
     background-color: #0056b3;
 }
 
+/* resume button  */
+
+.resumebutton-center{
+    display: flex;
+    justify-content: center;
+}
+
+.resume-button {
+    position: fixed;
+    bottom: 2%;
+    background-color: #5f0eff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    z-index: 1000;
+}
+
+.resume-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+}
+
+
+
 /*-----Footer-----*/
 footer {
     background-color: rgb(0, 0, 0);
@@ -529,6 +619,7 @@ footer {
 #myVideo {
     position: fixed;
     min-width: 100%;
+    filter: hue-rotate(45deg);
     min-height: 100%;
     z-index: -1;
     object-fit: contain;
