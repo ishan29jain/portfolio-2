@@ -421,6 +421,10 @@ nav.scrolled:hover {
     justify-content: center;
 }
 
+.experience-container a{
+    text-decoration: none;
+}
+
 .experience-card {
     /* background-color: #1a1a40; */
     color: white;
