@@ -95,3 +95,27 @@ projectsContainer.addEventListener("mouseenter", () => {
 projectsContainer.addEventListener("mouseleave", () => {
     scrollInterval = setInterval(autoScroll, 100);
 });
+
+function toggleProjects() {
+    const hiddenProjects = document.querySelector('.hidden-projects');
+    const btn = document.querySelector('.show-more-btn');
+
+    if (hiddenProjects.style.display === "none" || hiddenProjects.style.display === "") {
+        hiddenProjects.style.display = "grid";
+        btn.innerHTML = "Show Less ▲";
+    } else {
+        hiddenProjects.style.display = "none";
+        btn.innerHTML = "Show More ▼";
+    }
+}
+
+document.getElementById("toggleProjectsBtn").addEventListener("click", function () {
+    const hiddenProjects = document.querySelector(".hidden-projects");
+    if (hiddenProjects.classList.contains("show")) {
+        hiddenProjects.classList.remove("show");
+        this.textContent = "Show More ↓";
+    } else {
+        hiddenProjects.classList.add("show");
+        this.textContent = "Show Less ↑";
+    }
+});
