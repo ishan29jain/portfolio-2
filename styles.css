@@ -361,7 +361,7 @@ nav.scrolled:hover {
 
     .project-cards {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        /* grid-template-columns: repeat(2, 1fr); */
         gap: 20px;
     }
 }
@@ -372,9 +372,9 @@ nav.scrolled:hover {
         gap: 8px;
     }
 }
-@media (max-width: 1420px){
+@media (max-width: 768px){
     .project-card {
-        width: 40vw; 
+        width: 100%; 
     }
 }
 
