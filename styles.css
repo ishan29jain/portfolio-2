@@ -4,9 +4,11 @@
     padding: 0;
     scroll-behavior: smooth;
 }
-html{
+
+html {
     scroll-behavior: smooth;
 }
+
 body {
     background-color: #000000;
     color: white;
@@ -43,31 +45,36 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 8vh; 
+    height: 8vh;
     padding: 0 5%;
     border-radius: 80px;
-    margin: 2% auto; 
+    margin: 2% auto;
     max-width: 80%;
     background-color: rgb(0, 0, 0);
     box-shadow: 0 2px rgb(220 220 220 / 10%);
     transition: all 0.35s ease-in-out;
 }
 
+@media (max-width: 1180px) {
+    nav {
+        display: none;
+    }
+} 
 
 nav.scrolled {
     max-width: 25%;
 }
 
 nav.scrolled .right {
-    display: none; 
+    display: none;
 }
 
 nav.scrolled .left {
-    font-size: 1.2rem; 
+    font-size: 1.2rem;
 }
 
 /*-----Contact Links in Scrolled State-----*/
- nav.scrolled .contact-links {
+nav.scrolled .contact-links {
     display: flex;
     gap: 20px;
 }
@@ -77,6 +84,7 @@ nav.scrolled .contact-links a {
     font-size: 1.2rem;
     transition: color 0.35s ease;
 }
+
 /*
 nav.scrolled .contact-links a:hover {
     color: rgb(255, 255, 255);
@@ -94,7 +102,7 @@ nav.scrolled:hover{
     transition: font-size 0.3s ease;
 }
 
-.right{
+.right {
     overflow: hidden;
 }
 
@@ -130,6 +138,7 @@ nav.scrolled:hover{
 .corner ul li a:hover {
     color: rgb(255, 255, 255);
 }
+
 /* 
 nav.scrolled:hover {
     height: 80px;
@@ -151,25 +160,31 @@ nav.scrolled:hover {
     /* min-height: 100vh; */
     /* background: linear-gradient(135deg, #000428, #004e92); */
     align-items: center;
-    margin: 1% 10% 10% 10%;
+    margin: 10% 10% 10% 10%;
     /* margin-right: auto; */
 }
 
-.text-baseline{
+.text-baseline {
     font-size: 1.5rem;
 }
 
-.rightSection{
+.rightSection {
     display: contents;
     overflow: hidden;
 }
 
-.profile-pic{
+@media(max-width:768px){
+    .rightSection{
+        display: none;
+    }
+}
+
+.profile-pic {
     width: 30%;
 }
 
-.profile-pic img{
-    box-shadow:0 0 2px rgb(0, 0, 0);
+.profile-pic img {
+    box-shadow: 0 0 2px rgb(0, 0, 0);
 }
 
 /*-----Name and Passion-----*/
@@ -312,7 +327,7 @@ nav.scrolled:hover {
     border-radius: 10px;
     padding: 20px;
     width: 24vw;
-    justify-content:start;
+    justify-content: start;
     /* left: 0; */
     /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
     transition: transform 0.3s ease-in-out;
@@ -348,7 +363,7 @@ nav.scrolled:hover {
     background-color: #0056b3;
 }
 
-.project-buttons{
+.project-buttons {
     display: flex;
     gap: 4%;
 }
@@ -356,7 +371,7 @@ nav.scrolled:hover {
 /*-----Responsive Design for Mobile View-----*/
 @media (max-width: 768px) {
     .projects-container {
-        overflow-x: hidden; 
+        overflow-x: hidden;
     }
 
     .project-cards {
@@ -365,18 +380,21 @@ nav.scrolled:hover {
         gap: 20px;
     }
 }
-@media (max-width: 600px){
-    .project-buttons{
+
+@media (max-width: 600px) {
+    .project-buttons {
         flex-direction: column;
         /* padding: 31px; */
         gap: 8px;
     }
 }
-@media (max-width: 768px){
+
+@media (max-width: 768px) {
     .project-card {
-        width: 100%; 
+        width: 100%;
     }
 }
+
 .hidden-projects {
     max-height: 0;
     overflow: hidden;
@@ -385,7 +403,8 @@ nav.scrolled:hover {
 }
 
 .hidden-projects.show {
-    max-height: 1000px; /* Large enough to fit content */
+    max-height: 1000px;
+    /* Large enough to fit content */
     opacity: 1;
 }
 
@@ -434,6 +453,7 @@ nav.scrolled:hover {
     transition: transform 0.3s ease-in-out;
     /* box-shadow: 2px 2px rgb(220 220 220 / 10%); */
     /* box-shadow: 0 0 2px 2px rgba(152, 152, 152, 0.1); */
+    
 }
 
 .experience-card:hover {
@@ -446,8 +466,9 @@ nav.scrolled:hover {
     margin-bottom: 10px;
 }
 
-.exp-para-head{
+.exp-para-head {
     margin-bottom: 4%;
+    text-decoration: none;
 }
 
 /* .experience-card ul {
@@ -583,7 +604,7 @@ nav.scrolled:hover {
 
 /* resume button  */
 
-.resumebutton-center{
+.resumebutton-center {
     display: flex;
     justify-content: center;
 }
@@ -615,8 +636,8 @@ footer {
     height: 20vh;
 }
 
-@media(max-width: 768px){
-    footer{
+@media(max-width: 768px) {
+    footer {
         height: 12vh;
     }
 }
@@ -632,11 +653,11 @@ footer {
     font-weight: bold;
 }
 
-.footer-third{
+.footer-third {
     width: 100%;
 }
 
-.footer-third ul{
+.footer-third ul {
     display: flex;
     justify-content: center;
 }
@@ -665,16 +686,10 @@ footer {
     z-index: -1;
     object-fit: contain;
     top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  width: auto;
-  height: auto;
-    
-  }
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: auto;
+    height: auto;
+    pointer-events: none;
 
-
-  @media (max-width: 768px) {
-    nav {
-        display: none;
-    }
 }
